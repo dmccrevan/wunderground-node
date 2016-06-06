@@ -1,0 +1,24 @@
+{
+  "name": "wunderground-node",
+  "version": "0.0.1",
+  "description": "Simplified wrapper for using The Weather Channel's APIs.",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dmccrevan/wunderground-node.git"
+  },
+  "author": "Daniel McCrevan <danielmccrevan@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dmccrevan/wunderground-node/issues"
+  },
+  "homepage": "https://github.com/dmccrevan/wunderground-node#readme",
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "chai-http": "^2.0.1",
+    "mocha": "^2.5.3"
+  }
+}
