@@ -22,22 +22,22 @@ A simple wrapper for the [Wundeground API](http://www.wunderground.com/weather/a
  ```
 # API
 
- ### conditions:
+### conditions:
  Gets the conditions for a specific location
 
- ### forecast:
+### forecast:
  Gets the forecast for a specific location
 
- ### forecast10day:
+### forecast10day:
  Gets the forecast 10 days in advance for a specific location
 
- ### hourly:
+### hourly:
  Gets the hourly conditions for a specific location
 
- ### hourly10day:
+### hourly10day:
  Gets the hourly conditions 10 days in advance for a specific location
- 
- ### alerts:
+
+### alerts:
  Gets the alerts for a specific location
 
 #Testing
