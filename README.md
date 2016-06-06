@@ -1,5 +1,5 @@
 # wunderground-node
-
+[![Build Status](https://travis-ci.org/dmccrevan/wunderground-node.svg?branch=master)](https://travis-ci.org/dmccrevan/wunderground-node)
 A simple wrapper for the [Wundeground API](http://www.wunderground.com/weather/api) for Node.js
 
 # Install
