@@ -21,6 +21,7 @@ A simple wrapper for the [Wundeground API](http://www.wunderground.com/weather/a
  	console.log(data);
  });
  ```
+ 
 # API
 
 ### conditions:
@@ -40,6 +41,39 @@ A simple wrapper for the [Wundeground API](http://www.wunderground.com/weather/a
 
 ### alerts:
  Gets the alerts for a specific location
+
+### almanac:
+ Gets the average low and high temperatures
+
+### astronomy
+ Gets the moon phases, sunrise and sunset times
+
+### currentHurricane
+ Gets information on current hurricanes and tropical storms
+
+### geolookup
+ Gets the city name, zip/postal code, latitude & longitude coordinates
+
+### history('<YYYYMMDD')
+ Gets the summary of the weather on the specificed date. Must be passed into the function in the format: YYYYMMDD
+
+### planner('MMDDMMDD')
+ Gets the summary based on the time interval specified. Must be passed into the function in the format: MMDDMMDD
+
+### rawtide
+ Gets raw tidal information
+
+### satellite
+ Gets the URL to the .gif visual and infrared satellite images
+
+### tide 
+ Gets tidal information
+
+### webcams
+ Gets the locations of nearby weather stations and URLs for images from their web cams
+
+### yesterday
+ Gets the summary of the weather for yesterday
 
 #Testing
  `$ mocha`
