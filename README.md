@@ -3,6 +3,7 @@
 [![MIT Licence](https://badges.frapsoft.com/os/mit/mit.svg?v=103)](https://opensource.org/licenses/mit-license.php)
 [![npm version](https://badge.fury.io/js/wunderground-node.svg)](https://badge.fury.io/js/wunderground-node)
 [![devDependency Status](https://david-dm.org/dmccrevan/wunderground-node/dev-status.svg)](https://david-dm.org/dmccrevan/wunderground-node#info=devDependencies)
+[![Code Climate](https://codeclimate.com/github/dmccrevan/wunderground-node/badges/gpa.svg)](https://codeclimate.com/github/dmccrevan/wunderground-node)
 
 
 A simple wrapper for the [Wundeground API](http://www.wunderground.com/weather/api) for Node.js
