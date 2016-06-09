@@ -4,7 +4,7 @@
   "description": "Simplified wrapper for using The Weather Channel's APIs.",
   "main": "index.js",
   "scripts": {
-    "test": "mocha"
+    "test": "mocha --timeout 15000"
   },
   "repository": {
     "type": "git",
