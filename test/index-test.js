@@ -2,7 +2,7 @@ var wunderground = require('../index.js');
 var chai = require('chai');
 var chaiHttp = require('chai-http');
 var should = chai.should();
-var client = new wunderground('b143d96d8360be46', 'Boston', 'MA');
+var client = new wunderground(process.env.KEY, 'Boston', 'MA');
 
 chai.use(chaiHttp);
 
