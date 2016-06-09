@@ -18,28 +18,100 @@ A simple wrapper for the [Wundeground API](http://www.wunderground.com/weather/a
 ```
 
 # Examples
+
+ Full Init
+
  ```js
  var wunderground = require('wunderground-node');
  var client = new wunderground('<api_key_here', 'Boston', 'MA');
 
  //Gets the forecast in Boston for today
- client.forecast('forecast', function(err, data){
+ client.forecast('forecast', '', function(err, data){
  	if(err) throw err;
  	console.log(data);
  });
 
  //Gets a summary of the weather in Boston on May 21st, 2011
- client.history('history', '20110521', function(err,data){
+ client.history('history', '20110521', '', function(err,data){
  	if(err) throw err;
  	console.log(data);
  });
 
  //Gets a summary of the weather in Boston between the dates May 21st - May 28th of this year.
- client.planner('planner', '05210528', function(err, data){
+ client.planner('planner', '05210528', '', function(err, data){
  	if(err) throw err;
  	console.log(data);
  });
  ```
+
+ Half Init
+
+  ```js
+ var wunderground = require('wunderground-node');
+ var client = new wunderground('<api_key_here'>);
+ var opts = {
+ 	city: 'Boston',
+ 	state: 'MA'
+ };
+
+ //Gets the forecast in Boston for today
+ client.forecast('forecast', opts, function(err, data){
+ 	if(err) throw err;
+ 	console.log(data);
+ });
+
+ //Gets a summary of the weather in Boston on May 21st, 2011
+ client.history('history', '20110521', opts, function(err,data){
+ 	if(err) throw err;
+ 	console.log(data);
+ });
+
+ //Gets a summary of the weather in Boston between the dates May 21st - May 28th of this year.
+ client.planner('planner', '05210528', opts, function(err, data){
+ 	if(err) throw err;
+ 	console.log(data);
+ });
+ ```
+
+ No Init
+
+  ```js
+ var wunderground = require('wunderground-node');
+ var client = new wunderground();
+ var opts = {
+ 	key: '<api_key_here>',
+ 	city: 'Boston',
+ 	state: 'MA'
+ };
+
+ //Gets the forecast in Boston for today
+ client.forecast('forecast', opts, function(err, data){
+ 	if(err) throw err;
+ 	console.log(data);
+ });
+
+ //Gets a summary of the weather in Boston on May 21st, 2011
+ client.history('history', '20110521', opts, function(err,data){
+ 	if(err) throw err;
+ 	console.log(data);
+ });
+
+ //Gets a summary of the weather in Boston between the dates May 21st - May 28th of this year.
+ client.planner('planner', '05210528', opts, function(err, data){
+ 	if(err) throw err;
+ 	console.log(data);
+ });
+ ```
+
+# Configuration
+ When configuring a new wunderground client, you must provide the following:
+
+ ###Params
+ * key - Wunderground API key
+ * city - city for weather
+ * state - state for weather
+
+ All params are initially optional and can be overwritten using an opts object.
 
 # API
 

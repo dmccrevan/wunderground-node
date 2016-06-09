@@ -4,7 +4,10 @@ var wunderground = function(key, city, state) {
 	this.key = key || null;
 	this.city = city || null;
 	this.state = state || null;
-	this.path = function(apiType, date){
+	this.path = function(apiType, opts, date){
+		var key = opts.key || this.key;
+		var city = opts.city || this.city;
+		var state = opts.state || this.state;
 		if(date){
 			if(apiType === 'history_' || apiType === 'planner_'){
 				return '/api/' + key + '/' + apiType + date + '/q/' + state + '/' + city + '.json';
