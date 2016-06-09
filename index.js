@@ -6,7 +6,7 @@ var wunderground = function(key, city, state) {
 	this.state = state || null;
 	this.path = function(apiType, date){
 		if(date){
-			if(apiType == 'history_' || apiType == 'planner_'){
+			if(apiType === 'history_' || apiType === 'planner_'){
 				return '/api/' + key + '/' + apiType + date + '/q/' + state + '/' + city + '.json';
 			}
 			else{
@@ -15,7 +15,7 @@ var wunderground = function(key, city, state) {
 			}
 		}
 		else{
-			if(apiType == 'currenthurricane'){
+			if(apiType === 'currenthurricane'){
 				return '/api/' + key + '/' + apiType + '/view.json';
 			}
 			else{
