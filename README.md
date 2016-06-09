@@ -106,11 +106,11 @@ A simple wrapper for the [Wundeground API](http://www.wunderground.com/weather/a
 # Configuration
  When configuring a new wunderground client, you must provide the following:
 
- ###Params
+ ### Params
  * key - Wunderground API key
  * city - city for weather
  * state - state for weather
-
+ 
  All params are initially optional and can be overwritten using an opts object.
 
 # API
