@@ -23,23 +23,23 @@ var wunderground = function(key, city, state) {
 			}
 		}
 	};
-	this.conditions = wundergroundApi.conditions;
-	this.forecast = wundergroundApi.forecast;
-	this.forecast10day = wundergroundApi.forecast10day;
-	this.hourly = wundergroundApi.hourly;
-	this.hourly10day = wundergroundApi.hourly10day;
-	this.alerts = wundergroundApi.alerts;
-	this.almanac = wundergroundApi.almanac;
-	this.astronomy = wundergroundApi.astronomy;
-	this.currentHurricane = wundergroundApi.currentHurricane;
-	this.geolookup = wundergroundApi.geolookup;
-	this.history = wundergroundApi.history;
-	this.planner = wundergroundApi.planner;
-	this.rawtide = wundergroundApi.rawtide;
-	this.satellite = wundergroundApi.satellite;
-	this.tide = wundergroundApi.tide;
-	this.webcams = wundergroundApi.webcams;
-	this.yesterday = wundergroundApi.yesterday;
+	this.conditions = wundergroundApi.API;
+	this.forecast = wundergroundApi.API;
+	this.forecast10day = wundergroundApi.API;
+	this.hourly = wundergroundApi.API;
+	this.hourly10day = wundergroundApi.API;
+	this.alerts = wundergroundApi.API;
+	this.almanac = wundergroundApi.API;
+	this.astronomy = wundergroundApi.API;
+	this.currentHurricane = wundergroundApi.API;
+	this.geolookup = wundergroundApi.API;
+	this.history = wundergroundApi.APIDate;
+	this.planner = wundergroundApi.APIDate;
+	this.rawtide = wundergroundApi.API;
+	this.satellite = wundergroundApi.API;
+	this.tide = wundergroundApi.API;
+	this.webcams = wundergroundApi.API;
+	this.yesterday = wundergroundApi.API;
 };
 
 module.exports = wunderground;

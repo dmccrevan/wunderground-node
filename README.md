@@ -22,19 +22,19 @@ A simple wrapper for the [Wundeground API](http://www.wunderground.com/weather/a
  var client = new wunderground('<api_key_here', 'Boston', 'MA');
 
  //Gets the forecast in Boston for today
- client.forecast(function(err, data){
+ client.forecast('forecast', function(err, data){
  	if(err) throw err;
  	console.log(data);
  });
 
  //Gets a summary of the weather in Boston on May 21st, 2011
- client.history('20110521', function(err,data){
+ client.history('history', '20110521', function(err,data){
  	if(err) throw err;
  	console.log(data);
  });
 
  //Gets a summary of the weather in Boston between the dates May 21st - May 28th of this year.
- client.planner('05210528', function(err, data){
+ client.planner('planner', '05210528', function(err, data){
  	if(err) throw err;
  	console.log(data);
  });

@@ -1,6 +1,6 @@
 {
   "name": "wunderground-node",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "description": "Simplified wrapper for using The Weather Channel's APIs.",
   "main": "index.js",
   "scripts": {

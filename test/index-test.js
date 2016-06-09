@@ -2,13 +2,13 @@ var wunderground = require('../index.js');
 var chai = require('chai');
 var chaiHttp = require('chai-http');
 var should = chai.should();
-var client = new wunderground(process.env.KEY, 'Boston', 'MA');
+var client = new wunderground('b143d96d8360be46', 'Boston', 'MA');
 
 chai.use(chaiHttp);
 
 describe('wunderground api', function(){
 	it('.conditions', function(done){
-		client.conditions(function(err, res){
+		client.conditions('conditions',function(err, res){
 			if(err) return done(err);
 			res.should.be.an.object;
 			res.current_observation.display_location.full.should.eql('Boston, MA');
@@ -17,7 +17,7 @@ describe('wunderground api', function(){
 		});
 	});
 	it('.forecast', function(done){
-		client.forecast(function(err, res){
+		client.forecast('forecast', function(err, res){
 			if(err) return done(err);
 			res = res.forecast.txt_forecast.forecastday;
 			res.should.be.an.array;
@@ -25,7 +25,7 @@ describe('wunderground api', function(){
 		});
 	});
 	it('.forecast10day', function(done){
-		client.forecast10day(function(err, res){
+		client.forecast10day('forecast10day', function(err, res){
 			if(err) return done(err);
 			res = res.forecast.txt_forecast.forecastday;
 			res.should.be.an.array;
@@ -33,7 +33,7 @@ describe('wunderground api', function(){
 		});
 	});
 	it('.hourly', function(done){
-		client.hourly(function(err, res){
+		client.hourly('hourly', function(err, res){
 			if(err) return done(err);
 			res = res.hourly_forecast;
 			res.should.be.an.array;
@@ -41,7 +41,7 @@ describe('wunderground api', function(){
 		});
 	});
 	it('.hourly10day', function(done){
-		client.hourly10day(function(err, res){
+		client.hourly10day('hourly10day', function(err, res){
 			if(err) return done(err);
 			res = res.hourly_forecast;
 			res.should.be.an.array;
@@ -49,7 +49,7 @@ describe('wunderground api', function(){
 		});
 	});
 	it('.alerts', function(done){
-		client.alerts(function(err, res){
+		client.alerts('alerts', function(err, res){
 			if(err) return done(err);
 			res = res.alerts;
 			res.should.be.an.array;
@@ -57,7 +57,7 @@ describe('wunderground api', function(){
 		});
 	});
 	it('.almanac', function(done){
-		client.almanac(function(err, res){
+		client.almanac('almanac', function(err, res){
 			if(err) return done(err);
 			res = res.almanac;
 			res.should.have.property('temp_high');
@@ -65,7 +65,7 @@ describe('wunderground api', function(){
 		});
 	});
 	it('.astronomy', function(done){
-		client.astronomy(function(err, res){
+		client.astronomy('astronomy', function(err, res){
 			if(err) return done(err);
 			res = res.moon_phase;
 			res.should.have.property('ageOfMoon');
@@ -73,7 +73,7 @@ describe('wunderground api', function(){
 		});
 	});
 	it('.currentHurricane', function(done){
-		client.currentHurricane(function(err, res){
+		client.currentHurricane('currenthurricane', function(err, res){
 			if(err) return done(err);
 			res = res.currenthurricane;
 			res.should.be.an.array;
@@ -81,7 +81,7 @@ describe('wunderground api', function(){
 		});
 	});
 	it('.geolookup', function(done){
-		client.geolookup(function(err, res){
+		client.geolookup('geolookup', function(err, res){
 			if(err) return done(err);
 			res = res.location;
 			res.should.have.property('country');
@@ -89,7 +89,7 @@ describe('wunderground api', function(){
 		});
 	});
 	it('.history', function(done){
-		client.history('20110521', function(err, res){
+		client.history('history', '20110521', function(err, res){
 			if(err) return done(err);
 			res = res.history;
 			res.should.have.property('date');
@@ -97,7 +97,7 @@ describe('wunderground api', function(){
 		});
 	});
 	it('.planner', function(done){
-		client.planner('05210528', function(err, res){
+		client.planner('planner', '05210528', function(err, res){
 			if(err) return done(err);
 			res = res.trip;
 			res.should.have.property('title');
@@ -105,7 +105,7 @@ describe('wunderground api', function(){
 		});
 	});
 	it('.rawtide', function(done){
-		client.rawtide(function(err, res){
+		client.rawtide('rawtide', function(err, res){
 			if(err) return done(err);
 			res = res.rawtide;
 			res.should.have.property('tideInfo');
@@ -113,7 +113,7 @@ describe('wunderground api', function(){
 		});
 	});
 	it('.satellite', function(done){
-		client.satellite(function(err, res){
+		client.satellite('satellite', function(err, res){
 			if(err) return done(err);
 			res = res.satellite;
 			res.should.have.property('image_url');
@@ -121,7 +121,7 @@ describe('wunderground api', function(){
 		});
 	});
 	it('.tide', function(done){
-		client.tide(function(err, res){
+		client.tide('tide', function(err, res){
 			if(err) return done(err);
 			res = res.tide;
 			res.should.have.property('tideInfo');
@@ -129,7 +129,7 @@ describe('wunderground api', function(){
 		});
 	});
 	it('.webcams', function(done){
-		client.webcams(function(err, res){
+		client.webcams('webcams', function(err, res){
 			if(err) return done(err);
 			res = res.webcams;
 			res.should.be.an.array;
@@ -137,7 +137,7 @@ describe('wunderground api', function(){
 		});
 	});
 	it('.yesterday', function(done){
-		client.yesterday(function(err, res){
+		client.yesterday('yesterday', function(err, res){
 			if(err) return done(err);
 			res = res.history;
 			res.should.have.property('date')
