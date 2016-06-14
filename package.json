@@ -1,6 +1,6 @@
 {
   "name": "wunderground-node",
-  "version": "0.3.0",
+  "version": "0.3.2",
   "description": "Simplified wrapper for using The Weather Channel's APIs.",
   "main": "index.js",
   "scripts": {
@@ -18,7 +18,7 @@
   "homepage": "https://github.com/dmccrevan/wunderground-node#readme",
   "devDependencies": {
     "chai": "^3.5.0",
-    "chai-http": "^2.0.1",
+    "chai-http": "^3.0.0",
     "mocha": "^2.5.3"
   }
 }
