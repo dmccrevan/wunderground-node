@@ -1,5 +1,3 @@
 language: node_js
-node_js: 
-  - '0.12.7'
-env:
-  - KEY=b143d96d8360be46
+node_js:
+- 0.12.7
